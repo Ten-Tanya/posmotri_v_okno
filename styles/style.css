@@ -54,6 +54,7 @@ ol {
   gap: 30px;
   padding: 133px 30px;
   inline-size: 1140px;
+  margin: 0 auto;
 }
 
 .result__video-container {
