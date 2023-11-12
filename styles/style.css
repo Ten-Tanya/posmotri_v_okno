@@ -19,6 +19,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: auto;
 }
 
 h1,
@@ -55,8 +56,8 @@ ol {
   grid-template-columns: 711px auto;
   align-items: end;
   gap: 30px;
-  padding: 133px 30px;
   inline-size: 1140px;
+  overflow: auto;
 }
 
 .result__video-container {
@@ -109,7 +110,7 @@ ol {
   border: 1px solid #fff;
   border-right: none;
   border-left: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: currentColor;
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
@@ -131,8 +132,9 @@ ol {
   width: 19px;
   height: 19px;
   margin-inline-end: 5px;
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
   cursor: pointer;
+  padding: 1px;
 }
 
 .search-form__label-text {
@@ -149,37 +151,42 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
 
-.search-form__checkbox:checked + span {
-  background-image: url(../check.svg);
-  background-position: center;
-  background-size: contain;
+.search-form__checkbox:checked + span{
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .search-form__label:hover {
-  text-decoration: underline;
   cursor: pointer;
 }
 
 .button {
   border: 1px solid #fff;
   color: #fff;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
   line-height: normal;
   text-align: center;
-  background-color: #1b1919;
+  background-color: transparent;
   cursor: pointer;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
   align-self: self-end;
   width: 194px;
-  height: 34px;
 }
 
 .button:hover {
@@ -211,7 +218,7 @@ ol {
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -243,6 +250,7 @@ ol {
 .content__card-link {
   color: #fff;
   text-decoration: none;
+  display: block;
 }
 
 .content__video-card-description-container {
@@ -254,7 +262,7 @@ ol {
 
 .content__video-card-title {
   color: currentColor;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
@@ -287,11 +295,9 @@ ol {
 
 .more-button {
   width: 399px;
-  height: 34px;
 }
 
 .content__card-link_current {
-  display: block;
   background-color: #545050;
 }
 
