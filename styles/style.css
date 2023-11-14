@@ -19,7 +19,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: auto;
 }
 
 h1,
@@ -57,7 +56,6 @@ ol {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
-  overflow: auto;
 }
 
 .result__video-container {
@@ -175,7 +173,8 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label-text:hover {
+.search-form__label-text:hover,
+.search-form__pseudo-checkbox:hover + span {
   text-decoration: underline;
 }
 
@@ -217,7 +216,6 @@ ol {
 }
 
 .button:active {
-  border: 1px solid #fff;
   background: #545050;
 }
 
